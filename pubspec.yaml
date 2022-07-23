@@ -1,0 +1,38 @@
+name: russian_license_plate
+description: Input and output widgets for russian cars' license plates. Possiable typese are standart, route and polices.
+version: 0.0.3
+authir: Danila Goryachkin
+homepage: https://github.com/InnoFlutter/russian_license_plate
+
+environment:
+  sdk: ">=2.17.1 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.russian_license_plate.russian_license_plate
+        pluginClass: RussianLicensePlatePlugin
+      ios:
+        pluginClass: RussianLicensePlatePlugin
+      web:
+        pluginClass: RussianLicensePlateWeb
+        fileName: russian_license_plate_web.dart
+
+  fonts:
+    - family: RoadNumbers
+      fonts:
+        - asset: fonts/RoadNumbers2.0.ttf
